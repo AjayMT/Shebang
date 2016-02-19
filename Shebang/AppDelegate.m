@@ -3,20 +3,17 @@
 //  Shebang
 //
 //  Created by Ajay Madhusudan on 20/02/16.
-//  Copyright © 2016 Ajay Madhusudan. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
-@property (weak) IBOutlet NSWindow *window;
-@end
-
 @implementation AppDelegate
+@synthesize statusItem, statusMenu;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    statusItem.title = @"#!";
+    statusItem.menu = statusMenu;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
