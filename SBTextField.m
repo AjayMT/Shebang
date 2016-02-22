@@ -3,7 +3,6 @@
 //  Shebang
 //
 //  Created by Ajay Madhusudan on 22/02/16.
-//  Copyright © 2016 Ajay Madhusudan. All rights reserved.
 //
 
 #import "SBTextField.h"
