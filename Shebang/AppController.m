@@ -6,9 +6,11 @@
 //
 
 #import "AppController.h"
+#import "SBGlobals.h"
+#import "SBUtils.h"
 
 @implementation AppController
-@synthesize shebangWindow;
+@synthesize shebangWindow, shebangTextField;
 
 - (instancetype)init
 {
@@ -17,9 +19,27 @@
         int panelY = [NSScreen mainScreen].frame.size.height / 3;
         NSRect frame = NSMakeRect(panelX, panelY, 600, 100);
         shebangWindow = [[SBFloatingWindow alloc] initWithContentRect:frame];
+        
+        shebangTextField = [[SBTextField alloc] initWithFrame:[SBUtils makeRectWithinRect:frame withBorder:15]];
+        shebangTextField.controller = self;
+        shebangTextField.controllerAction = @selector(handleEvent:);
+        [shebangWindow.contentView addSubview:shebangTextField];
     }
     
     return self;
+}
+
+- (void)performShellCommand:(NSString *)command
+{
+    // TODO
+}
+
+- (void)handleEvent:(id)sender
+{
+    [shebangWindow close];
+    
+    if ([sender isEqual:@(SBEventTypeReturn)])
+        [self performShellCommand:shebangTextField.stringValue];
 }
 
 - (IBAction)openShebangWindow:(id)sender

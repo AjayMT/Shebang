@@ -7,9 +7,13 @@
 
 #import <Foundation/Foundation.h>
 #import "SBFloatingWindow.h"
+#import "SBTextField.h"
 
 @interface AppController : NSObject
 @property (nonatomic, retain) SBFloatingWindow *shebangWindow;
+@property (nonatomic, retain) SBTextField *shebangTextField;
 
+- (void)performShellCommand:(NSString *)command;
+- (void)handleEvent:(id)sender;
 - (IBAction)openShebangWindow:(id)sender;
 @end

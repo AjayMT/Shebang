@@ -13,6 +13,8 @@
 		2DDFD4F11C77A27B00648974 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EF1C77A27B00648974 /* MainMenu.xib */; };
 		2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */; };
 		2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9C01C7AF7EF002213C5 /* AppController.m */; };
+		2DEEC9CA1C7B10CF002213C5 /* SBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9C91C7B10CF002213C5 /* SBTextField.m */; };
+		2DEEC9CF1C7B1914002213C5 /* SBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9CE1C7B1914002213C5 /* SBUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,11 @@
 		2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFloatingWindow.m; sourceTree = "<group>"; };
 		2DEEC9BF1C7AF7EF002213C5 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2DEEC9C01C7AF7EF002213C5 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		2DEEC9C81C7B10CF002213C5 /* SBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBTextField.h; path = ../SBTextField.h; sourceTree = "<group>"; };
+		2DEEC9C91C7B10CF002213C5 /* SBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBTextField.m; path = ../SBTextField.m; sourceTree = "<group>"; };
+		2DEEC9CC1C7B136F002213C5 /* SBGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBGlobals.h; path = ../SBGlobals.h; sourceTree = "<group>"; };
+		2DEEC9CD1C7B1914002213C5 /* SBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBUtils.h; sourceTree = "<group>"; };
+		2DEEC9CE1C7B1914002213C5 /* SBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +66,10 @@
 		2DDFD4E61C77A27B00648974 /* Shebang */ = {
 			isa = PBXGroup;
 			children = (
+				2DEEC9D01C7B1920002213C5 /* Utils */,
+				2DEEC9CB1C7B10E3002213C5 /* Interface */,
 				2DDFD4E71C77A27B00648974 /* AppDelegate.h */,
 				2DDFD4E81C77A27B00648974 /* AppDelegate.m */,
-				2DEEC9BC1C7AF650002213C5 /* SBFloatingWindow.h */,
-				2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */,
 				2DEEC9BF1C7AF7EF002213C5 /* AppController.h */,
 				2DEEC9C01C7AF7EF002213C5 /* AppController.m */,
 				2DDFD4ED1C77A27B00648974 /* Assets.xcassets */,
@@ -79,6 +86,27 @@
 				2DDFD4EB1C77A27B00648974 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DEEC9CB1C7B10E3002213C5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEC9C81C7B10CF002213C5 /* SBTextField.h */,
+				2DEEC9C91C7B10CF002213C5 /* SBTextField.m */,
+				2DEEC9BC1C7AF650002213C5 /* SBFloatingWindow.h */,
+				2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		2DEEC9D01C7B1920002213C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEC9CD1C7B1914002213C5 /* SBUtils.h */,
+				2DEEC9CE1C7B1914002213C5 /* SBUtils.m */,
+				2DEEC9CC1C7B136F002213C5 /* SBGlobals.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DEEC9CA1C7B10CF002213C5 /* SBTextField.m in Sources */,
 				2DDFD4EC1C77A27B00648974 /* main.m in Sources */,
 				2DDFD4E91C77A27B00648974 /* AppDelegate.m in Sources */,
 				2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */,
+				2DEEC9CF1C7B1914002213C5 /* SBUtils.m in Sources */,
 				2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
