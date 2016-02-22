@@ -31,15 +31,18 @@
 
 - (void)performShellCommand:(NSString *)command
 {
-    // TODO
+    NSString *shell = [NSProcessInfo processInfo].environment[@"SHELL"];
+    NSTask *task = [NSTask launchedTaskWithLaunchPath:shell arguments:@[@"-l", @"-i", @"-c", command]];
+    [task waitUntilExit];
 }
 
 - (void)handleEvent:(id)sender
 {
+    NSString *text = shebangTextField.stringValue;
     [shebangWindow close];
     
     if ([sender isEqual:@(SBEventTypeReturn)])
-        [self performShellCommand:shebangTextField.stringValue];
+        [self performShellCommand:text];
 }
 
 - (IBAction)openShebangWindow:(id)sender
