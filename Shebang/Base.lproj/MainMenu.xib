@@ -18,10 +18,14 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="pau-HS-zfL" customClass="AppController"/>
         <menu id="Qsd-0a-9rY" userLabel="Main Menu">
             <items>
-                <menuItem title="Item 1" id="Ltf-ej-a2L">
+                <menuItem title="Open Shebang Window" id="Ltf-ej-a2L">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openShebangWindow:" target="pau-HS-zfL" id="3q9-zk-Aa8"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Item 2" id="j6N-6w-jV8">
                     <modifierMask key="keyEquivalentModifierMask"/>

@@ -11,6 +11,8 @@
 		2DDFD4EC1C77A27B00648974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EB1C77A27B00648974 /* main.m */; };
 		2DDFD4EE1C77A27B00648974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4ED1C77A27B00648974 /* Assets.xcassets */; };
 		2DDFD4F11C77A27B00648974 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EF1C77A27B00648974 /* MainMenu.xib */; };
+		2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */; };
+		2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9C01C7AF7EF002213C5 /* AppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,10 @@
 		2DDFD4ED1C77A27B00648974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DDFD4F01C77A27B00648974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2DDFD4F21C77A27B00648974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DEEC9BC1C7AF650002213C5 /* SBFloatingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFloatingWindow.h; sourceTree = "<group>"; };
+		2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFloatingWindow.m; sourceTree = "<group>"; };
+		2DEEC9BF1C7AF7EF002213C5 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		2DEEC9C01C7AF7EF002213C5 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,10 @@
 			children = (
 				2DDFD4E71C77A27B00648974 /* AppDelegate.h */,
 				2DDFD4E81C77A27B00648974 /* AppDelegate.m */,
+				2DEEC9BC1C7AF650002213C5 /* SBFloatingWindow.h */,
+				2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */,
+				2DEEC9BF1C7AF7EF002213C5 /* AppController.h */,
+				2DEEC9C01C7AF7EF002213C5 /* AppController.m */,
 				2DDFD4ED1C77A27B00648974 /* Assets.xcassets */,
 				2DDFD4EF1C77A27B00648974 /* MainMenu.xib */,
 				2DDFD4F21C77A27B00648974 /* Info.plist */,
@@ -142,6 +152,8 @@
 			files = (
 				2DDFD4EC1C77A27B00648974 /* main.m in Sources */,
 				2DDFD4E91C77A27B00648974 /* AppDelegate.m in Sources */,
+				2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */,
+				2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +293,7 @@
 				2DDFD4F71C77A27B00648974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
