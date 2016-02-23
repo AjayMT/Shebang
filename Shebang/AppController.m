@@ -32,8 +32,19 @@
 - (void)performShellCommand:(NSString *)command
 {
     NSString *shell = [NSProcessInfo processInfo].environment[@"SHELL"];
-    NSTask *task = [NSTask launchedTaskWithLaunchPath:shell arguments:@[@"-l", @"-i", @"-c", command]];
-    [task waitUntilExit];
+    [NSTask launchedTaskWithLaunchPath:shell arguments:@[@"-l", @"-i", @"-c", command]];
+    
+    NSUserNotification *notification = [NSUserNotification new];
+    notification.title = shell;
+    notification.subtitle = command;
+    notification.hasActionButton = NO;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    [NSTimer scheduledTimerWithTimeInterval:5.0
+                                     target:[NSUserNotificationCenter defaultUserNotificationCenter]
+                                   selector:@selector(removeAllDeliveredNotifications)
+                                   userInfo:NULL
+                                    repeats:NO];
 }
 
 - (void)handleEvent:(id)sender
