@@ -18,7 +18,7 @@
         self.opaque = NO;
         self.level = NSStatusWindowLevel;
         self.movableByWindowBackground = YES;
-        self.backgroundColor = [NSColor colorWithCalibratedWhite:0.1 alpha:1];
+        self.backgroundColor = [NSColor blackColor];
         self.hasShadow = YES;
         self.releasedWhenClosed = NO;
         

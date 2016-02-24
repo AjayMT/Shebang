@@ -23,7 +23,6 @@
         self.backgroundColor = [NSColor colorWithCalibratedWhite:0 alpha:0];
         self.textColor = [NSColor whiteColor];
         self.focusRingType = NSFocusRingTypeNone;
-        self.font = [NSFont fontWithName:@"Helvetica-Light" size:56];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(onClose)

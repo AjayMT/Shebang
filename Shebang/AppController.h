@@ -9,7 +9,7 @@
 #import "SBFloatingWindow.h"
 #import "SBTextField.h"
 
-@interface AppController : NSObject
+@interface AppController : NSObject <NSUserNotificationCenterDelegate>
 @property (nonatomic, retain) SBFloatingWindow *shebangWindow;
 @property (nonatomic, retain) SBTextField *shebangTextField;
 
