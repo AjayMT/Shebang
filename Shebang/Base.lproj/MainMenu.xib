@@ -27,8 +27,11 @@
                         <action selector="openShebangWindow:" target="pau-HS-zfL" id="3q9-zk-Aa8"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Item 2" id="j6N-6w-jV8">
+                <menuItem title="Preferences..." id="j6N-6w-jV8">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openPreferences:" target="pau-HS-zfL" id="Rd8-dq-Trk"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit Shebang" id="vex-ij-Ebo">
                     <modifierMask key="keyEquivalentModifierMask"/>

@@ -10,11 +10,13 @@
 #import "SBUtils.h"
 
 @implementation AppController
-@synthesize shebangWindow, shebangTextField;
+@synthesize shebangWindow, shebangTextField, preferencesWindowController;
 
 - (instancetype)init
 {
     if (self = [super init]) {
+        preferencesWindowController = [[SBPreferencesWindowController alloc] initWithWindowNibName:@"SBPreferencesWindowController"];
+        
         int panelX = ([NSScreen mainScreen].frame.size.width / 2) - 250;
         int panelY = [NSScreen mainScreen].frame.size.height / 3;
         NSRect frame = NSMakeRect(panelX, panelY, 500, 80);
@@ -27,6 +29,11 @@
         [shebangWindow.contentView addSubview:shebangTextField];
         
         [NSUserNotificationCenter defaultUserNotificationCenter].delegate = self;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleHotkey:)
+                                                     name:NULL
+                                                   object:preferencesWindowController];
     }
     
     return self;
@@ -64,6 +71,14 @@
         [self performShellCommand:text];
 }
 
+- (void)handleHotkey:(id)sender
+{
+    if (shebangWindow.isKeyWindow)
+        [shebangWindow close];
+    else
+        [self openShebangWindow:sender];
+}
+
 - (IBAction)openShebangWindow:(id)sender
 {
     int panelX = ([NSScreen mainScreen].frame.size.width / 2) - (shebangWindow.frame.size.width / 2);
@@ -74,6 +89,11 @@
     
     [shebangWindow makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
+}
+
+- (IBAction)openPreferences:(id)sender
+{
+    [preferencesWindowController showWindow:self];
 }
 
 @end

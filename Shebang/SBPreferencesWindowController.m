@@ -6,17 +6,39 @@
 //
 
 #import "SBPreferencesWindowController.h"
+#import "SBGlobals.h"
+#import "SBUtils.h"
 
 @interface SBPreferencesWindowController ()
-
+@property (nonatomic, retain) NSString *shortcutUserDefaultsKey;
 @end
 
 @implementation SBPreferencesWindowController
+@synthesize shortcutView, shortcutUserDefaultsKey, shortcutViewContainer;
 
-- (void)windowDidLoad {
-    [super windowDidLoad];
+- (instancetype)initWithWindowNibName:(NSString *)windowNibName
+{
+    self = [super initWithWindowNibName:windowNibName];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    if (self) {
+        shortcutUserDefaultsKey = @"GlobalHotkey";
+        shortcutView = [[MASShortcutView alloc] init];
+        shortcutView.associatedUserDefaultsKey = shortcutUserDefaultsKey;
+        
+        [[MASShortcutBinder sharedBinder]
+         bindShortcutWithDefaultsKey:shortcutUserDefaultsKey
+         toAction:^{
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"ShebangHotkey" object:self];
+         }];
+    }
+    
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    shortcutView.frame = [SBUtils makeRectWithinRect:shortcutViewContainer.frame withBorder:0];
+    [shortcutViewContainer addSubview:shortcutView];
 }
 
 @end

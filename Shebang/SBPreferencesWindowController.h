@@ -6,7 +6,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <MASShortcut/Shortcut.h>
 
 @interface SBPreferencesWindowController : NSWindowController
-
+@property (nonatomic, retain) IBOutlet NSView *shortcutViewContainer;
+@property (nonatomic, retain) MASShortcutView *shortcutView;
 @end
