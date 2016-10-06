@@ -18,13 +18,13 @@
 		2D9974821DA669BA0059731E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9974811DA669BA0059731E /* Assets.xcassets */; };
 		2D9974851DA669BA0059731E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9974831DA669BA0059731E /* MainMenu.xib */; };
 		2D99748C1DA66A9B0059731E /* ShebangHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D9974791DA669BA0059731E /* ShebangHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2DB55D9A1DA674870054FCB8 /* SBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB55D991DA674870054FCB8 /* SBTextField.m */; };
 		2DDFD4E91C77A27B00648974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFD4E81C77A27B00648974 /* AppDelegate.m */; };
 		2DDFD4EC1C77A27B00648974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EB1C77A27B00648974 /* main.m */; };
 		2DDFD4EE1C77A27B00648974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4ED1C77A27B00648974 /* Assets.xcassets */; };
 		2DDFD4F11C77A27B00648974 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EF1C77A27B00648974 /* MainMenu.xib */; };
 		2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */; };
 		2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9C01C7AF7EF002213C5 /* AppController.m */; };
-		2DEEC9CA1C7B10CF002213C5 /* SBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9C91C7B10CF002213C5 /* SBTextField.m */; };
 		2DEEC9CF1C7B1914002213C5 /* SBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEC9CE1C7B1914002213C5 /* SBUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +76,9 @@
 		2D9974811DA669BA0059731E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D9974841DA669BA0059731E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2D9974861DA669BA0059731E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB55D971DA674480054FCB8 /* SBGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGlobals.h; sourceTree = "<group>"; };
+		2DB55D981DA674870054FCB8 /* SBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTextField.h; sourceTree = "<group>"; };
+		2DB55D991DA674870054FCB8 /* SBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTextField.m; sourceTree = "<group>"; };
 		2DDFD4E41C77A27B00648974 /* Shebang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shebang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDFD4E71C77A27B00648974 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DDFD4E81C77A27B00648974 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,9 +90,6 @@
 		2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFloatingWindow.m; sourceTree = "<group>"; };
 		2DEEC9BF1C7AF7EF002213C5 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2DEEC9C01C7AF7EF002213C5 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		2DEEC9C81C7B10CF002213C5 /* SBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBTextField.h; path = ../SBTextField.h; sourceTree = "<group>"; };
-		2DEEC9C91C7B10CF002213C5 /* SBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBTextField.m; path = ../SBTextField.m; sourceTree = "<group>"; };
-		2DEEC9CC1C7B136F002213C5 /* SBGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBGlobals.h; path = ../SBGlobals.h; sourceTree = "<group>"; };
 		2DEEC9CD1C7B1914002213C5 /* SBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBUtils.h; sourceTree = "<group>"; };
 		2DEEC9CE1C7B1914002213C5 /* SBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,8 +195,8 @@
 		2DEEC9CB1C7B10E3002213C5 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				2DEEC9C81C7B10CF002213C5 /* SBTextField.h */,
-				2DEEC9C91C7B10CF002213C5 /* SBTextField.m */,
+				2DB55D981DA674870054FCB8 /* SBTextField.h */,
+				2DB55D991DA674870054FCB8 /* SBTextField.m */,
 				2DEEC9BC1C7AF650002213C5 /* SBFloatingWindow.h */,
 				2DEEC9BD1C7AF650002213C5 /* SBFloatingWindow.m */,
 			);
@@ -208,7 +208,7 @@
 			children = (
 				2DEEC9CD1C7B1914002213C5 /* SBUtils.h */,
 				2DEEC9CE1C7B1914002213C5 /* SBUtils.m */,
-				2DEEC9CC1C7B136F002213C5 /* SBGlobals.h */,
+				2DB55D971DA674480054FCB8 /* SBGlobals.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -326,13 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEEC9CA1C7B10CF002213C5 /* SBTextField.m in Sources */,
 				2DDFD4EC1C77A27B00648974 /* main.m in Sources */,
 				2D2B36CC1C80D4D600B2AAAD /* SBPreferencesWindowController.m in Sources */,
 				2DDFD4E91C77A27B00648974 /* AppDelegate.m in Sources */,
 				2DEEC9BE1C7AF650002213C5 /* SBFloatingWindow.m in Sources */,
 				2DEEC9CF1C7B1914002213C5 /* SBUtils.m in Sources */,
 				2DEEC9C11C7AF7EF002213C5 /* AppController.m in Sources */,
+				2DB55D9A1DA674870054FCB8 /* SBTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +517,7 @@
 				2D9974881DA669BA0059731E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DDFD4DF1C77A27B00648974 /* Build configuration list for PBXProject "Shebang" */ = {
 			isa = XCConfigurationList;
