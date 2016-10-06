@@ -10,8 +10,14 @@
 		2D062A8A1C80E31F00EB82E6 /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D062A891C80E31F00EB82E6 /* MASShortcut.framework */; };
 		2D062A8B1C80E31F00EB82E6 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D062A891C80E31F00EB82E6 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D062A8F1C80E37800EB82E6 /* MASShortcut.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D062A8E1C80E37800EB82E6 /* MASShortcut.framework.dSYM */; };
+		2D08372E1C8223F900FA8ECA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D08372D1C8223F900FA8ECA /* ServiceManagement.framework */; };
 		2D2B36CC1C80D4D600B2AAAD /* SBPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B36CA1C80D4D600B2AAAD /* SBPreferencesWindowController.m */; };
 		2D2B36CD1C80D4D600B2AAAD /* SBPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2B36CB1C80D4D600B2AAAD /* SBPreferencesWindowController.xib */; };
+		2D99747D1DA669BA0059731E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D99747C1DA669BA0059731E /* AppDelegate.m */; };
+		2D9974801DA669BA0059731E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D99747F1DA669BA0059731E /* main.m */; };
+		2D9974821DA669BA0059731E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9974811DA669BA0059731E /* Assets.xcassets */; };
+		2D9974851DA669BA0059731E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9974831DA669BA0059731E /* MainMenu.xib */; };
+		2D99748C1DA66A9B0059731E /* ShebangHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D9974791DA669BA0059731E /* ShebangHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2DDFD4E91C77A27B00648974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFD4E81C77A27B00648974 /* AppDelegate.m */; };
 		2DDFD4EC1C77A27B00648974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFD4EB1C77A27B00648974 /* main.m */; };
 		2DDFD4EE1C77A27B00648974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDFD4ED1C77A27B00648974 /* Assets.xcassets */; };
@@ -44,14 +50,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D99748B1DA66A7C0059731E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				2D99748C1DA66A9B0059731E /* ShebangHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D062A891C80E31F00EB82E6 /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MASShortcut.framework; path = Carthage/Build/Mac/MASShortcut.framework; sourceTree = "<group>"; };
 		2D062A8E1C80E37800EB82E6 /* MASShortcut.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MASShortcut.framework.dSYM; path = Carthage/Build/Mac/MASShortcut.framework.dSYM; sourceTree = "<group>"; };
+		2D08372D1C8223F900FA8ECA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		2D2B36C91C80D4D600B2AAAD /* SBPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPreferencesWindowController.h; sourceTree = "<group>"; };
 		2D2B36CA1C80D4D600B2AAAD /* SBPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPreferencesWindowController.m; sourceTree = "<group>"; };
 		2D2B36CB1C80D4D600B2AAAD /* SBPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBPreferencesWindowController.xib; sourceTree = "<group>"; };
+		2D9974791DA669BA0059731E /* ShebangHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShebangHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D99747B1DA669BA0059731E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D99747C1DA669BA0059731E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D99747F1DA669BA0059731E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D9974811DA669BA0059731E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D9974841DA669BA0059731E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2D9974861DA669BA0059731E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DDFD4E41C77A27B00648974 /* Shebang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shebang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDFD4E71C77A27B00648974 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DDFD4E81C77A27B00648974 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,10 +95,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D9974761DA669BA0059731E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DDFD4E11C77A27B00648974 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D08372E1C8223F900FA8ECA /* ServiceManagement.framework in Frameworks */,
 				2D062A8A1C80E31F00EB82E6 /* MASShortcut.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,12 +124,35 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
+		2D99747A1DA669BA0059731E /* ShebangHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2D99747B1DA669BA0059731E /* AppDelegate.h */,
+				2D99747C1DA669BA0059731E /* AppDelegate.m */,
+				2D9974811DA669BA0059731E /* Assets.xcassets */,
+				2D9974831DA669BA0059731E /* MainMenu.xib */,
+				2D9974861DA669BA0059731E /* Info.plist */,
+				2D99747E1DA669BA0059731E /* Supporting Files */,
+			);
+			path = ShebangHelper;
+			sourceTree = "<group>";
+		};
+		2D99747E1DA669BA0059731E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D99747F1DA669BA0059731E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2DDFD4DB1C77A27B00648974 = {
 			isa = PBXGroup;
 			children = (
+				2D08372D1C8223F900FA8ECA /* ServiceManagement.framework */,
 				2D062A8E1C80E37800EB82E6 /* MASShortcut.framework.dSYM */,
 				2D062A891C80E31F00EB82E6 /* MASShortcut.framework */,
 				2DDFD4E61C77A27B00648974 /* Shebang */,
+				2D99747A1DA669BA0059731E /* ShebangHelper */,
 				2DDFD4E51C77A27B00648974 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDFD4E41C77A27B00648974 /* Shebang.app */,
+				2D9974791DA669BA0059731E /* ShebangHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +216,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D9974781DA669BA0059731E /* ShebangHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D9974891DA669BA0059731E /* Build configuration list for PBXNativeTarget "ShebangHelper" */;
+			buildPhases = (
+				2D9974751DA669BA0059731E /* Sources */,
+				2D9974761DA669BA0059731E /* Frameworks */,
+				2D9974771DA669BA0059731E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShebangHelper;
+			productName = ShebangHelper;
+			productReference = 2D9974791DA669BA0059731E /* ShebangHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2DDFD4E31C77A27B00648974 /* Shebang */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDFD4F51C77A27B00648974 /* Build configuration list for PBXNativeTarget "Shebang" */;
@@ -169,6 +242,7 @@
 				2DDFD4E21C77A27B00648974 /* Resources */,
 				2D062A8C1C80E31F00EB82E6 /* Embed Frameworks */,
 				2D062A8D1C80E34900EB82E6 /* CopyFiles */,
+				2D99748B1DA66A7C0059731E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -188,6 +262,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Ajay Madhusudan";
 				TargetAttributes = {
+					2D9974781DA669BA0059731E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					2DDFD4E31C77A27B00648974 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -207,11 +285,21 @@
 			projectRoot = "";
 			targets = (
 				2DDFD4E31C77A27B00648974 /* Shebang */,
+				2D9974781DA669BA0059731E /* ShebangHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D9974771DA669BA0059731E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9974821DA669BA0059731E /* Assets.xcassets in Resources */,
+				2D9974851DA669BA0059731E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DDFD4E21C77A27B00648974 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +313,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D9974751DA669BA0059731E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9974801DA669BA0059731E /* main.m in Sources */,
+				2D99747D1DA669BA0059731E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DDFD4E01C77A27B00648974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +339,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2D9974831DA669BA0059731E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9974841DA669BA0059731E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		2DDFD4EF1C77A27B00648974 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -253,6 +358,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2D9974871DA669BA0059731E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShebangHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajaymt.ShebangHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2D9974881DA669BA0059731E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShebangHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajaymt.ShebangHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		2DDFD4F31C77A27B00648974 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +484,7 @@
 				);
 				INFOPLIST_FILE = Shebang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajaymt.Shebang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,6 +501,7 @@
 				);
 				INFOPLIST_FILE = Shebang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajaymt.Shebang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -367,6 +510,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D9974891DA669BA0059731E /* Build configuration list for PBXNativeTarget "ShebangHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D9974871DA669BA0059731E /* Debug */,
+				2D9974881DA669BA0059731E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2DDFD4DF1C77A27B00648974 /* Build configuration list for PBXProject "Shebang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

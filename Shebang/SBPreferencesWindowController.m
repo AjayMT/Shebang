@@ -5,28 +5,30 @@
 //  Created by Ajay Madhusudan on 27/02/16.
 //
 
+#import <ServiceManagement/SMLoginItem.h>
 #import "SBPreferencesWindowController.h"
 #import "SBGlobals.h"
 #import "SBUtils.h"
 
 @interface SBPreferencesWindowController ()
-@property (nonatomic, retain) NSString *shortcutUserDefaultsKey;
+@property (nonatomic, retain, readonly) NSString *shortcutUserDefaultsKey;
+@property (nonatomic, retain, readonly) NSString *launchAtLoginUserDefaultsKey;
 @end
 
 @implementation SBPreferencesWindowController
-@synthesize shortcutView, shortcutUserDefaultsKey, shortcutViewContainer;
+@synthesize shortcutView, shortcutViewContainer;
+@synthesize launchAtLoginButton;
 
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName
 {
     self = [super initWithWindowNibName:windowNibName];
     
     if (self) {
-        shortcutUserDefaultsKey = @"GlobalHotkey";
         shortcutView = [[MASShortcutView alloc] init];
-        shortcutView.associatedUserDefaultsKey = shortcutUserDefaultsKey;
+        shortcutView.associatedUserDefaultsKey = self.shortcutUserDefaultsKey;
         
         [[MASShortcutBinder sharedBinder]
-         bindShortcutWithDefaultsKey:shortcutUserDefaultsKey
+         bindShortcutWithDefaultsKey:self.shortcutUserDefaultsKey
          toAction:^{
              [[NSNotificationCenter defaultCenter] postNotificationName:@"ShebangHotkey" object:self];
          }];
@@ -35,10 +37,37 @@
     return self;
 }
 
+- (NSString *)shortcutUserDefaultsKey
+{
+    return @"GlobalHotkey";
+}
+
+- (NSString *)launchAtLoginUserDefaultsKey
+{
+    return @"LaunchAtLogin";
+}
+
+- (BOOL)launchAtLogin
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:self.launchAtLoginUserDefaultsKey];
+}
+
 - (void)awakeFromNib
 {
     shortcutView.frame = [SBUtils makeRectWithinRect:shortcutViewContainer.frame withBorder:0];
     [shortcutViewContainer addSubview:shortcutView];
+    
+    launchAtLoginButton.state = self.launchAtLogin ? NSOnState : NSOffState;
+}
+
+- (IBAction)toggleLaunchAtLogin:(id)sender
+{
+    BOOL l = launchAtLoginButton.state == NSOnState;
+    [[NSUserDefaults standardUserDefaults] setBool:l forKey:self.launchAtLoginUserDefaultsKey];
+    
+    NSString *helperBundleIdentifier = @"com.ajaymt.ShebangHelper";
+    BOOL success = SMLoginItemSetEnabled((__bridge CFStringRef)helperBundleIdentifier, l);
+    NSLog(@"%d", success ? 1 : 0);
 }
 
 @end
