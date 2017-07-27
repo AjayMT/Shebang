@@ -62,12 +62,13 @@
 
 - (IBAction)toggleLaunchAtLogin:(id)sender
 {
-    BOOL l = launchAtLoginButton.state == NSOnState;
-    [[NSUserDefaults standardUserDefaults] setBool:l forKey:self.launchAtLoginUserDefaultsKey];
+    BOOL launch = launchAtLoginButton.state == NSOnState;
+    [[NSUserDefaults standardUserDefaults] setBool:launch forKey:self.launchAtLoginUserDefaultsKey];
     
     NSString *helperBundleIdentifier = @"com.ajaymt.ShebangHelper";
-    BOOL success = SMLoginItemSetEnabled((__bridge CFStringRef)helperBundleIdentifier, l);
-    NSLog(@"%d", success ? 1 : 0);
+    BOOL success = SMLoginItemSetEnabled((__bridge CFStringRef)helperBundleIdentifier, launch);
+    
+    if (! success) NSLog(@"Error: Unable to activate launch at login");
 }
 
 @end
